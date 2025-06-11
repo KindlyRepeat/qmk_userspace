@@ -1,0 +1,94 @@
+#+title: TODOS
+
+* TODO Shorterm :
+** TODO Setup qmk userspace https://docs.qmk.fm/newbs_external_userspace
+** TODO Combo for tab. I'd rather have A+R as TAB but those are currently bound to A_GRV.
+** TODO Use emacs-next for editorconfig support. Enable it for qmk
+** TODO Find a spot for < >
+** TODO Find a spot for ^
+
+* Navigation layer
++ Move left one character (left)
++ Move left one word (C-left) (shifted version? No. shift-left moves left but select the text)
+      - Maybe do this one as a tap dance ? And add a repeat key on a thumb to avoid double-clicking multiple times
+
+
++ Move to beginning of line (home)
++ Move to beginning of buffer (C-home)
+
+** TODO As a tap-dance. Single: left. Double: home
+home brings us to the beginning of the line, left moves us by one character and Ctrl-left moves one word.
+
+* Number row or numpad ?
+https://forum.colemak.com/topic/2310-thoughts-about-the-classic-dvorak-numbers-row/
+
+* TODO Mod-tap Flow tap ?
+* TODO Oneshot modifiers
++ Hitting ctrl or shift or alt would apply it to the next key
++ Hitting ctrl+alt (a combo) would ctrl+alt the next key
+
+* Toggle layers inspired from Ben Vallack's keymap
+Reference video: [[https://www.youtube.com/watch?v=8wZ8FRwOzhU][YouTube - You Won’t Believe How Effective This Keyboard Layout Is]]
+
++ In any layer except the base layer, the second thumb key will bring us back to the base layer
++ In all layers, the third thumb key will bring us to the next layer
++ This gives us a *panic mode* key sequence. Hitting in succession the third and the second thumb key will always bring us back to the base layer.
+** TODO In the base layer, the second thumb key is still available (tap and held)
+** TODO In the base layer, the third thumb key is still available (held)
+** TODO In all the other layers, the second and third thumb keys are available (held)
+
+* OSL for symbols ?
+That could work for most symbols, like ~, /,
+Some other symbols come in pairs, such as «», (), {}, []
+
+* TODO Figure out the problem where key sequences (from combos) are sent too quickly to RDP
+See https://github.com/qmk/qmk_firmware/issues/19671 as a starting point.
+The problem is mentioned in https://docs.qmk.fm/mod_tap#caveats
+
+* TODO Figure out a way to output french accents
+** Analysis
+
+| Letter | Number of accented versions of that letter | [[https://fr.wikipedia.org/wiki/Fr%C3%A9quence_d%27apparition_des_lettres][Frequency]]                   |
+| A      | 2 (À, Â)                                   | (0.31%, 0.03%)              |
+| C      | 1 (Ç)                                      | (0.06%)                     |
+| E      | 4 (É, È, Ê, Ë)                             | (1.94%, 0.31%, 0.08%, 0.01% |
+| I      | 2 (Î Ï)                                    | (0.03%, 0.01%)              |
+| O      | 1 (Ô)                                      | (0.04%)                     |
+| U      | 2 (Ù, Û)                                   | (0.02%, 0.02%)              |
+
+** As combos
++ Efficient as it only requires one keypress to output an accented key.
++ Easy to remember. The combo always includes the key to accent and a key that represent the accent.
+      - ~a+x = â~
+      - ~e+x = ê~
+      - ~i+x = î~
++ Some combos are hard to press. ~a+x~ for example.
++ Some are easy to type in a sequence with another letters while other are not.
+
+*************** TODO Can I hold a combo to have the shifted version ?
+*************** END
+
+*** TODO Combos that use two hands are fast and comfortable. Adapt the ones that are uncomfortable
+For example, ~a+x~ sucks. Let's mirror it for ~a+.~
+~a+r (à)~ would become ~a+i~.
+
+** As tap dance
+*************** TODO Can the repeat key be used as the second tap of a tap dance ?
+*************** END
++ Some letters would require three taps
++ Easy to remember as I can group the accented letters under their unaccented version.
+** As keys on another layer
++ Two keypresses
++ I could use a oneshot layer, making it more comfortable.
++ I'd have to learn that layout, even though some accented letters could be positioned on top of the regular letter.
+
+* Do I like auto shift key ?
+
+* Combos
++ Return
++ Backspace
++ Parentheses, curly and square brackets
+
+* Rewrite a mouse layer
+
+* TODO Enable high resolution scrolling

@@ -1,0 +1,19 @@
+//   Name      Result    Chord keys
+COMB(enter,    KC_ENT,   LCTL_E, LALT_I)
+COMB(backsp,   KC_BSPC,  FR_U,   FR_Y)
+COMB(delete,   KC_DEL,   FR_L,   FR_U, FR_Y)
+COMB(escape,   KC_ESC,   FR_Q,	 FR_W)
+COMB(tab,      KC_TAB,   FR_Z,	 FR_X) // TODO: I'd rater have A+R as tab, but for now its a_grave
+
+// Accents
+COMB(e_grave,  E_GRV,    LCTL_E, LALT_R)
+COMB(a_grave,  A_GRV,    LGUI_A, LALT_R)
+COMB(u_grave,  U_GRV,    FR_U,   LALT_R)
+COMB(e_circ,   E_CIRC,	 LCTL_E, FR_X)
+COMB(a_circ,   A_CIRC,	 LGUI_A, FR_X)
+COMB(i_circ,   I_CIRC,	 LALT_I, FR_X)
+COMB(o_circ,   O_CIRC,   LGUI_O, FR_X)
+COMB(u_circ,   U_CIRC,	 FR_U, 	 FR_X)
+COMB(c_cedil,  C_CEDL,   FR_C, 	 FR_D)
+COMB(e_trema,  E_DIAE,   LCTL_E, FR_D)
+COMB(i_trema,  I_DIAE,   LALT_I, FR_D)
