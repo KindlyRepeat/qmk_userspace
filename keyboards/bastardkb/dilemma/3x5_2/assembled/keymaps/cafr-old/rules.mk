@@ -1,0 +1,5 @@
+CAPS_WORD_ENABLE      = yes
+COMBO_ENABLE          = yes
+DEFERRED_EXEC_ENABLE  = yes
+SWAP_HANDS_ENABLE     = no
+TAP_DANCE_ENABLE      = no
