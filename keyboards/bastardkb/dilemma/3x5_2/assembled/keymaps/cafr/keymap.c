@@ -19,7 +19,10 @@
 
 #include "keycodes.h"
 #include "keymap_canadian_french.h"
+#include "sendstring_canadian_french.h"
 #include "g/keymap_combo.h"
+
+#define ___X___ XXXXXXX
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -31,181 +34,257 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
           FR_Z,    FR_X,    FR_C,    FR_D,    FR_V,       FR_K,    FR_H, FR_COMM,  FR_DOT, FR_EACU,
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
-                                  NAV_SPC,  ACCENT,    OSL_SYM, KC_BSPC
+	                          NAV_SPC,  KC_ENT,    OSL_SYM, OSL_NUM
   //                            ╰──────────────────╯ ╰──────────────────╯
   ),
 
   [LAYER_NAV] = LAYOUT_split_3x5_2(
   // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
-       QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    KC_HOME, KC_PGDN, KC_PGUP,  KC_END, XXXXXXX,
+        KC_ESC,     C_W, C_S_TAB,   C_TAB,  KC_TAB,    KC_HOME, KC_PGDN, KC_PGUP,  KC_END, ___X___,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-       XXXXXXX, XXXXXXX, KC_LCTL, KC_LSFT, XXXXXXX,    KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, XXXXXXX,
+       C(FR_A), C(FR_L), KC_LCTL, KC_LSFT, C(S(FR_T)), KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, ___X___,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-       KC_UNDO,  KC_CUT, KC_COPY, XXXXXXX, KC_PSTE,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       KC_UNDO,  KC_CUT, KC_COPY, ___X___, KC_PSTE,    ___X___, ___X___, ___X___, ___X___, ___X___,
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
-                                  KC_BTN1, KC_BTN2,    XXXXXXX, KC_BSPC
-  //                            ╰──────────────────╯ ╰──────────────────╯
-  ),
-
-  [_ACCENT] = LAYOUT_split_3x5_2(
-  // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
-       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX,  U_GRV,  U_CIRC, XXXXXXX,
-  // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-         A_GRV,  A_CIRC, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, E_CIRC,  I_CIRC,  O_CIRC,
-  // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-       XXXXXXX, XXXXXXX,  C_CEDL, FR_DIAE, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
-                                  XXXXXXX, _______,    XXXXXXX, E_GRV
+                                  KC_BTN1, KC_BTN2,    ___X___, KC_BSPC
   //                            ╰──────────────────╯ ╰──────────────────╯
   ),
 
   [LAYER_SYM] = LAYOUT_split_3x5_2(
   // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
-       FR_LCBR, FR_AMPR, FR_ASTR, FR_LPRN, FR_RCBR,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        KC_ESC, FR_AMPR, FR_ASTR, ___X___, FR_BSLS,    ___X___, FR_LBRC, FR_RBRC, ___X___, ___X___,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-       FR_COLN,  FR_DLR, FR_PERC, FR_DCIR, FR_PLUS,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        KC_TAB,  FR_DLR, FR_PERC, FR_QUES, KC_PIPE,    ___X___, FR_LPRN, FR_RPRN, FR_LABK, FR_RABK,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-       FR_TILD, FR_EXLM,   FR_AT, FR_HASH, FR_PIPE,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       FR_TILD, FR_EXLM,   FR_AT, FR_HASH, FR_SLSH,    ___X___, FR_LCBR, FR_RCBR, FR_LDAQ, FR_RDAQ,
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
-                                  FR_RPRN, FR_UNDS,    TO_BASE, XXXXXXX
+                                  ___X___, FR_UNDS,    TO_BASE, ___X___
   //                            ╰──────────────────╯ ╰──────────────────╯
   ),
 
   [LAYER_NUM] = LAYOUT_split_3x5_2(
   // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
-       FR_LBRC,    KC_7,    KC_8,    KC_9, FR_RBRC,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       FR_SLSH,    KC_7,    KC_8,    KC_9, FR_MINS,    ___X___, ___X___, ___X___, ___X___, ___X___,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-       FR_SCLN,    KC_4,    KC_5,    KC_6,  FR_EQL,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       FR_ASTR,    KC_4,    KC_5,    KC_6, FR_PLUS,    ___X___, ___X___, ___X___, ___X___, ___X___,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-       FR_DGRV,    KC_1,    KC_2,    KC_3, FR_BSLS,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+          KC_0,    KC_1,    KC_2,    KC_3,  FR_EQL,    ___X___, ___X___, FR_COMM,  FR_DOT, ___X___,
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
-                                     KC_0, FR_MINS,    XXXXXXX, _______
+                                  KC_SPC,   KC_ENT,    ___X___, TO_BASE
   //                            ╰──────────────────╯ ╰──────────────────╯
   ),
 };
+
+void custom_shift_key(uint8_t mod_state, uint16_t keycode, uint16_t shifted_keycode) {
+    if (mod_state & MOD_MASK_SHIFT) {
+        tap_code16(shifted_keycode);
+    }
+    else {
+        tap_code16(keycode);
+    }
+}
+
 // clang-format on
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  uint8_t mod_state = get_mods();
-  switch (keycode) {
-    /* Same as US layout: outputs ''' and '"' when shifted */
-    case FR_QUOT:
-      if (record->event.pressed) {
-	if (mod_state & MOD_MASK_SHIFT) {
-	  del_mods(MOD_MASK_SHIFT);
-	  tap_code16(FR_DQUO);
-	  set_mods(mod_state);
-	}
-	else
-	  tap_code16(FR_QUOT);
-      }
-      return false;
-    /* Same as US layout: outputs ',' and ';' when shifted */
-    case FR_COMM:
-      if (record->event.pressed) {
-	if (mod_state & MOD_MASK_SHIFT) {
-	  del_mods(MOD_MASK_SHIFT);
-	  tap_code16(FR_SCLN);
-	  set_mods(mod_state);
-	}
-	else
-	  tap_code16(FR_COMM);
-      }
-      return false;
-    /* Same as US layout: outputs '.' and ':' when shifted */
-    case FR_DOT:
-      if (record->event.pressed) {
-	if (mod_state & MOD_MASK_SHIFT) {
-	  del_mods(MOD_MASK_SHIFT);
-	  tap_code16(FR_COLN);
-	  set_mods(mod_state);
-	}
-	else
-	  tap_code16(FR_DOT);
-      }
-      return false;
-    /* Same as US layout: outputs '/' and '?' when shifted */
+    uint8_t mod_state = get_mods();
+    switch (keycode) {
+        /* Same as US layout: outputs '/' and '?' when shifted */
     case FR_SLSH:
-      if (record->event.pressed) {
-	if (mod_state & MOD_MASK_SHIFT) {
-	  del_mods(MOD_MASK_SHIFT);
-	  tap_code16(FR_QUES);
-	  set_mods(mod_state);
-	}
-	else
-	  tap_code16(FR_SLSH);
-      }
-      return false;
-    case E_GRV:
-      if (record->event.pressed) {
-	tap_code16(FR_DGRV);
-	tap_code16(FR_E);
-      }
-      return false;
-    case A_GRV:
-      if (record->event.pressed) {
-	tap_code16(FR_DGRV);
-	tap_code16(FR_A);
-      }
-      return false;
+        if (record->event.pressed) {
+            if (mod_state & MOD_MASK_SHIFT) {
+                del_mods(MOD_MASK_SHIFT);
+                tap_code16(FR_QUES);
+                set_mods(mod_state);
+            }
+            else
+                tap_code16(FR_SLSH);
+        }
+        return false;
     case U_GRV:
-      if (record->event.pressed) {
-	tap_code16(FR_DGRV);
-	tap_code16(FR_U);
-      }
-      return false;
-    case E_CIRC:
-      if (record->event.pressed) {
-	tap_code16(FR_DCIR);
-	tap_code16(FR_E);
-      }
-      return false;
-    case A_CIRC:
-      if (record->event.pressed) {
-	tap_code16(FR_DCIR);
-	tap_code16(FR_A);
-      }
-      return false;
-    case I_CIRC:
-      if (record->event.pressed) {
-	tap_code16(FR_DCIR);
-	tap_code16(FR_I);
-      }
-      return false;
-    case O_CIRC:
-      if (record->event.pressed) {
-	tap_code16(FR_DCIR);
-	tap_code16(FR_O);
-      }
-      return false;
+        if (record->event.pressed) {
+            tap_code16(FR_DGRV);
+            tap_code16(FR_U);
+        }
+        return false;
     case U_CIRC:
-      if (record->event.pressed) {
-	tap_code16(FR_DCIR);
-	tap_code16(FR_U);
-      }
-      return false;
-    case C_CEDL:
-      if (record->event.pressed) {
-	tap_code16(FR_CEDL);
-	tap_code16(FR_C);
-      }
-      return false;
+        if (record->event.pressed) {
+            tap_code16(FR_DCIR);
+            tap_code16(FR_U);
+        }
+        return false;
     case E_DIAE:
-      if (record->event.pressed) {
-	tap_code16(FR_DIAE);
-	tap_code16(FR_E);
-      }
-      return false;
+        if (record->event.pressed) {
+            tap_code16(FR_DIAE);
+            tap_code16(FR_E);
+        }
+        return false;
     case I_DIAE:
-      if (record->event.pressed) {
-	tap_code16(FR_DIAE);
-	tap_code16(FR_I);
-      }
-      return false;
+        if (record->event.pressed) {
+            tap_code16(FR_DIAE);
+            tap_code16(FR_I);
+        }
+        return false;
+    case M_PAREN:
+        if (record->event.pressed) {
+            SEND_STRING("()" SS_TAP(X_LEFT));
+        }
+	return false;
+    case M_BRC:
+        if (record->event.pressed) {
+            SEND_STRING("[]" SS_TAP(X_LEFT));
+        }
+	return false;
+    case M_CBR:
+        if (record->event.pressed) {
+            SEND_STRING("{}" SS_TAP(X_LEFT));
+        }
+        return false;
     default:
+        return true;
+    }
+}
+
+bool get_custom_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
+  switch(keycode) {
+    case LGUI_A:
+    case LALT_R:
+    case LCTL_S:
+    case LSFT__T:
+    case LSFT_N:
+    case LCTL_E:
+    case LALT_I:
+    case LGUI_O:
+    case E_GRV:
+    case A_GRV:
+    case E_CIRC:
+    case A_CIRC:
+    case I_CIRC:
+    case O_CIRC:
+    case C_CEDL:
+    case FR_QUOT:
+    case FR_COMM:
+    case FR_DOT:
       return true;
+    default:
+      return false;
+    }
+}
+
+// code extended from the example on the QMK docs https://docs.qmk.fm/#/feature_auto_shift?id=custom-shifted-values
+// Autoshift combos to get capitalized accented letter.
+void autoshift_press_user(uint16_t keycode, bool shifted, keyrecord_t *record) {
+    switch(keycode) {
+    case FR_QUOT:
+        register_code16((!shifted) ? FR_QUOT : FR_DQUO);
+        break;
+    case FR_COMM:
+        register_code16((!shifted) ? FR_COMM : FR_SCLN);
+        break;
+    case FR_DOT:
+        register_code16((!shifted) ? FR_DOT : FR_COLN);
+        break;
+    case E_GRV:
+        if (shifted) {
+            tap_code16(FR_DGRV);
+            tap_code16(S(FR_E));
+        }
+        else {
+            tap_code16(FR_DGRV);
+            tap_code16(FR_E);
+        }
+        break;
+    case A_GRV:
+        if (shifted) {
+            tap_code16(FR_DGRV);
+            tap_code16(S(FR_A));
+        }
+        else {
+            tap_code16(FR_DGRV);
+            tap_code16(FR_A);
+        }
+        break;
+    case E_CIRC:
+        if (shifted) {
+            tap_code16(FR_DCIR);
+            tap_code16(S(FR_E));
+        }
+        else {
+            tap_code16(FR_DCIR);
+            tap_code16(FR_E);
+        }
+        break;
+    case A_CIRC:
+        if (shifted) {
+            tap_code16(FR_DCIR);
+            tap_code16(S(FR_A));
+        }
+        else {
+            tap_code16(FR_DCIR);
+            tap_code16(FR_A);
+        }
+        break;
+    case I_CIRC:
+        if (shifted) {
+            tap_code16(FR_DCIR);
+            tap_code16(S(FR_I));
+        }
+        else {
+            tap_code16(FR_DCIR);
+            tap_code16(FR_I);
+        }
+        break;
+    case O_CIRC:
+        if (shifted) {
+            tap_code16(FR_DCIR);
+            tap_code16(S(FR_O));
+        }
+        else {
+            tap_code16(FR_DCIR);
+            tap_code16(FR_O);
+        }
+        break;
+    case C_CEDL:
+        if (shifted) {
+            tap_code16(FR_CEDL);
+            tap_code16(S(FR_C));
+        }
+        else {
+            tap_code16(FR_CEDL);
+            tap_code16(FR_C);
+        }
+        break;
+    default:
+        if (shifted) {
+            add_weak_mods(MOD_BIT(KC_LSFT));
+        }
+        // & 0xFF gets the Tap key for Tap Holds, required when using Retro Shift
+        register_code16((IS_RETRO(keycode)) ? keycode & 0xFF : keycode);
+    }
+}
+
+void autoshift_release_user(uint16_t keycode, bool shifted, keyrecord_t *record) {
+  switch(keycode) {
+    case FR_QUOT:
+      unregister_code16((!shifted) ? FR_QUOT : FR_DQUO);
+      break;
+    case FR_COMM:
+      unregister_code16((!shifted) ? FR_COMM : FR_SCLN);
+      break;
+    case FR_DOT:
+      unregister_code16((!shifted) ? FR_DOT : FR_COLN);
+      break;
+    default:
+            // & 0xFF gets the Tap key for Tap Holds, required when using Retro Shift
+            // The IS_RETRO check isn't really necessary here, always using
+            // keycode & 0xFF would be fine.
+    unregister_code16((IS_RETRO(keycode)) ? keycode & 0xFF : keycode);
   }
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {
-  return state;
+    return state;
+}
+
+void pointing_device_init_user(void) {
+    set_auto_mouse_enable(true);         // always required before the auto mouse feature will work
 }

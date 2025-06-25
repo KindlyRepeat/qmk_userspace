@@ -7,7 +7,6 @@
 enum layers {
     LAYER_BASE = 0,
     LAYER_NAV,
-    _ACCENT,
     LAYER_SYM,
     LAYER_NUM,
 };
@@ -25,13 +24,22 @@ enum custom_keycodes {
   C_CEDL,
   E_DIAE,
   I_DIAE,
+  M_PAREN,
+  M_BRC,
+  M_CBR,
+  COMBO_TEST
 };
+
+#define C_W     C(FR_W)
+#define C_S_TAB C(S(KC_TAB))
+#define C_TAB   C(KC_TAB)
 
 /* Left hand Mod-Tap */
 #define LGUI_A     LGUI_T(FR_A)
 #define LALT_R     LALT_T(FR_R)
 #define LCTL_S     LCTL_T(FR_S)
 #define LSFT__T    LSFT_T(FR_T)
+
 /* Right hand Mod-Tap */
 #define LSFT_N     LSFT_T(FR_N)
 #define LCTL_E     LCTL_T(FR_E)
@@ -48,8 +56,13 @@ enum custom_keycodes {
 #define OSL_BAS  OSL(LAYER_BASE)
 #define OSL_SYM  OSL(LAYER_SYM)
 #define OSL_NUM  OSL(LAYER_NUM)
-#define ACCENT   OSL(_ACCENT)
 
 /* Toggle layer */
 #define TO_BASE  TO(LAYER_BASE)
 #define TO_SYM   TO(LAYER_SYM)
+
+/* Test */
+#define FRC_U_GRAVE SEND_STRING("`u")
+
+/* Macros */
+// #define M_PAREN SEND_STRING("()" SS_TAP(X_LEFT))
