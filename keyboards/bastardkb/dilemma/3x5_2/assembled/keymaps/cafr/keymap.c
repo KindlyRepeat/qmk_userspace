@@ -30,47 +30,47 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
           FR_Q,    FR_W,    FR_F,    FR_P,    FR_B,       FR_J,    FR_L,    FR_U,    FR_Y, FR_QUOT,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-        LGUI_A,  LALT_R,  LCTL_S, LSFT__T,    FR_G,       FR_M,  LSFT_N,  LCTL_E,  LALT_I,  LGUI_O,
+        LGUI_A,  LALT_R,  LCTL_S,    FR_T,    FR_G,       FR_M,    FR_N,  LCTL_E,  LALT_I,  LGUI_O,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
           FR_Z,    FR_X,    FR_C,    FR_D,    FR_V,       FR_K,    FR_H, FR_COMM,  FR_DOT, FR_EACU,
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
-	                          NAV_SPC,  KC_ENT,    OSL_SYM, OSL_NUM
+	                          NAV_SPC, SFT_TAB,    SYM_ENT, NUM_BSP
   //                            ╰──────────────────╯ ╰──────────────────╯
   ),
 
   [LAYER_NAV] = LAYOUT_split_3x5_2(
   // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
-        KC_ESC,     C_W, C_S_TAB,   C_TAB,  KC_TAB,    KC_HOME, KC_PGDN, KC_PGUP,  KC_END, ___X___,
+       QK_BOOT,   KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_AGIN, KC_UNDO,  KC_CUT, KC_COPY, KC_PSTE,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-       C(FR_A), C(FR_L), KC_LCTL, KC_LSFT, C(S(FR_T)), KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, ___X___,
+       KC_LGUI, KC_LALT, KC_LCTL, KC_BTN1, KC_BTN2,    KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, CW_TOGG,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-       KC_UNDO,  KC_CUT, KC_COPY, ___X___, KC_PSTE,    ___X___, ___X___, ___X___, ___X___, ___X___,
+         KC_NO, KC_RALT,   KC_NO,   KC_NO,   KC_NO,    KC_HOME, KC_PGDN, KC_PGUP,  KC_END,  KC_INS,
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
-                                  KC_BTN1, KC_BTN2,    ___X___, KC_BSPC
+                                   KC_ENT, KC_BSPC,      KC_NO,   KC_NO
   //                            ╰──────────────────╯ ╰──────────────────╯
   ),
 
   [LAYER_SYM] = LAYOUT_split_3x5_2(
   // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
-        KC_ESC, FR_AMPR, FR_ASTR, ___X___, FR_BSLS,    ___X___, FR_LBRC, FR_RBRC, ___X___, ___X___,
+       FR_LCBR, KC_AMPR, KC_ASTR, KC_LPRN, FR_RCBR,      KC_NO, FR_LDAQ, FR_LABK, FR_RABK, FR_RDAQ,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-        KC_TAB,  FR_DLR, FR_PERC, FR_QUES, KC_PIPE,    ___X___, FR_LPRN, FR_RPRN, FR_LABK, FR_RABK,
+       KC_COLN,  KC_DLR, KC_PERC, FR_QUES, KC_PLUS,      KC_NO,   KC_NO, KC_LCTL, KC_LALT, KC_LGUI,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-       FR_TILD, FR_EXLM,   FR_AT, FR_HASH, FR_SLSH,    ___X___, FR_LCBR, FR_RCBR, FR_LDAQ, FR_RDAQ,
+       FR_TILD, KC_EXLM,   FR_AT, FR_HASH, FR_PIPE,      KC_NO,   KC_NO,   KC_NO,  FR_DOT, FR_SLSH,
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
-                                  ___X___, FR_UNDS,    TO_BASE, ___X___
+                                  KC_RPRN, KC_UNDS,      KC_NO,   KC_NO
   //                            ╰──────────────────╯ ╰──────────────────╯
   ),
 
   [LAYER_NUM] = LAYOUT_split_3x5_2(
   // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
-       FR_SLSH,    KC_7,    KC_8,    KC_9, FR_MINS,    ___X___, ___X___, ___X___, ___X___, ___X___,
+       FR_LBRC,    KC_7,    KC_8,    KC_9, FR_RBRC,      KC_NO, FR_LDAQ, FR_LABK, FR_RABK, FR_RDAQ,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-       FR_ASTR,    KC_4,    KC_5,    KC_6, FR_PLUS,    ___X___, ___X___, ___X___, ___X___, ___X___,
+       KC_SCLN,    KC_4,    KC_5,    KC_6,  KC_EQL,      KC_NO,   KC_NO, KC_LCTL, KC_LALT, KC_LGUI,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-          KC_0,    KC_1,    KC_2,    KC_3,  FR_EQL,    ___X___, ___X___, FR_COMM,  FR_DOT, ___X___,
+       FR_DGRV,    KC_1,    KC_2,    KC_3, FR_BSLS,      KC_NO,   KC_NO,   KC_NO,  FR_DOT, FR_SLSH,
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
-                                  KC_SPC,   KC_ENT,    ___X___, TO_BASE
+                                     KC_0, KC_MINS,      KC_NO,   KC_NO
   //                            ╰──────────────────╯ ╰──────────────────╯
   ),
 };

@@ -1,5 +1,8 @@
 #include QMK_KEYBOARD_H
 
+#include "keycodes.h"
+#include "keymap_canadian_french.h"
+
 enum custom_keycodes {
   C_QUOT = SAFE_RANGE,
   C_SLSH,
@@ -305,33 +308,65 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
 }
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-	[0] = LAYOUT_split_3x5_2(
-KC_Q,         KC_W,         KC_F,         KC_P,         KC_B, KC_J, KC_L,         KC_U,         KC_Y,         C_QUOT,\
-LGUI_T(KC_A), LALT_T(KC_R), LCTL_T(KC_S), LSFT_T(KC_T), KC_G, KC_M, LSFT_T(KC_N), LCTL_T(KC_E), LALT_T(KC_I), LGUI_T(KC_O),\
-KC_Z,         ALGR_T(KC_X), KC_C,         KC_D,         KC_V, KC_K, KC_H,         KC_COMM,      KC_DOT,       C_SLSH,\
-LT(2,KC_SPC), LT(1,KC_TAB), LT(3,KC_ENT), LT(4,KC_BSPC)),
-	
-	[1] = LAYOUT_split_3x5_2(
-QK_BOOT, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,\
-KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_NO, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, KC_NO,\
-KC_NO, KC_RALT, KC_NO, KC_NO, KC_NO, KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, KC_NO,\
-KC_NO, KC_NO, KC_BTN2, KC_BTN1),
-	
-	[2] = LAYOUT_split_3x5_2(
-QK_BOOT, KC_NO, KC_NO, KC_NO, KC_NO, KC_AGIN, KC_UNDO, KC_CUT, KC_COPY, KC_PSTE,\
-KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_NO, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, CW_TOGG,\
-KC_NO, KC_RALT, KC_NO, KC_NO, KC_NO, KC_HOME, KC_PGDN, KC_PGUP, KC_END, KC_INS,\
-KC_NO, KC_NO, KC_ENT, KC_BSPC),
-	
-	[3] = LAYOUT_split_3x5_2(
-RALT(KC_QUOT), KC_AMPR, KC_ASTR, KC_LPRN, RALT(KC_BSLS), KC_NO, KC_NO, KC_NO, KC_NO, \
-QK_BOOT, KC_COLN, KC_DLR, KC_PERC, C_CIRC, KC_PLUS, KC_NO, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,\
-RALT(KC_SCLN), KC_EXLM, RALT(KC_2), KC_GRV, LSFT(KC_GRV), KC_NO, KC_NO, KC_NO, KC_RALT, KC_NO, \
-KC_RPRN, KC_UNDS, KC_NO, KC_NO),
-	
-	[4] = LAYOUT_split_3x5_2(
-RALT(KC_LBRC), KC_7, KC_8, KC_9, RALT(KC_RBRC), KC_NO, KC_NO, KC_NO, KC_NO, \
-QK_BOOT, KC_SCLN, KC_4, KC_5, KC_6, KC_EQL, KC_NO, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,\
-C_GRV, KC_1, KC_2, KC_3, RALT(KC_GRV), KC_NO, KC_NO, KC_NO, KC_RALT, KC_NO, \
-KC_0, KC_MINS, KC_NO, KC_NO)
+  [LAYER_BASE] = LAYOUT_split_3x5_2(
+  // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
+          KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,       KC_J,    KC_L,    KC_U,    KC_Y,  C_QUOT,
+  // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+        LGUI_A,  LALT_R,  LCTL_S, LSFT__T,    FR_G,       FR_M,  LSFT_N,  LCTL_E,  LALT_I,  LGUI_O,
+  // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+          FR_Z,    FR_X,    FR_C,    FR_D,    FR_V,       FR_K,    FR_H, FR_COMM,  FR_DOT, FR_SLSH,
+  // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
+                                  NAV_SPC, MOU_TAB,    SYM_ENT, NUM_BSP
+  //                            ╰──────────────────╯ ╰──────────────────╯
+  ),
+
+  [LAYER_MOUSE] = LAYOUT_split_3x5_2(
+  // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
+       QK_BOOT,   KC_NO,   KC_NO,   KC_NO,   KC_NO,      KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
+  // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+       KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT,   KC_NO,    KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R,   KC_NO,
+  // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+         KC_NO, KC_RALT,   KC_NO,   KC_NO,   KC_NO,    KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R,   KC_NO,
+  // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
+                                    KC_NO,   KC_NO,    KC_BTN2, KC_BTN1E
+  //                            ╰──────────────────╯ ╰──────────────────╯
+  ),
+
+  [LAYER_NAV] = LAYOUT_split_3x5_2(
+  // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
+       QK_BOOT,   KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_AGIN, KC_UNDO,  KC_CUT, KC_COPY, KC_PSTE,
+  // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+       KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT,   KC_NO,    KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT, CW_TOGG,
+  // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+         KC_NO, KC_RALT,   KC_NO,   KC_NO,   KC_NO,    KC_HOME, KC_PGDN, KC_PGUP,  KC_END,  KC_INS,
+  // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
+                                   KC_ENT, KC_BSPC,      KC_NO,   KC_NO
+  //                            ╰──────────────────╯ ╰──────────────────╯
+  ),
+
+
+  [LAYER_SYM] = LAYOUT_split_3x5_2(
+  // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
+       FR_LCBR, KC_AMPR, KC_ASTR, KC_LPRN, FR_RCBR,      KC_NO,   KC_NO,   KC_NO,   KC_NO, QK_BOOT,
+  // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+       KC_COLN,  KC_DLR, KC_PERC,  C_CIRC, KC_PLUS,      KC_NO, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
+  // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+       FR_TILD, KC_EXLM,   FR_AT, FR_HASH, FR_PIPE,      KC_NO,   KC_NO,   KC_NO, KC_RALT,   KC_NO,
+  // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
+                                  KC_RPRN, KC_UNDS,      KC_NO,   KC_NO
+  //                            ╰──────────────────╯ ╰──────────────────╯
+  ),
+
+
+  [LAYER_NUM] = LAYOUT_split_3x5_2(
+  // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
+       FR_LBRC,    KC_7,    KC_8,    KC_9, FR_RBRC,      KC_NO,   KC_NO,   KC_NO,   KC_NO, QK_BOOT,
+  // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+       KC_SCLN,    KC_4,    KC_5,    KC_6,  KC_EQL,      KC_NO, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
+  // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
+         C_GRV,    KC_1,    KC_2,    KC_3, FR_BSLS,      KC_NO,   KC_NO,   KC_NO, KC_RALT,   KC_NO,
+  // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
+                                     KC_0, KC_MINS,      KC_NO,   KC_NO
+  //                            ╰──────────────────╯ ╰──────────────────╯
+  ),
 };

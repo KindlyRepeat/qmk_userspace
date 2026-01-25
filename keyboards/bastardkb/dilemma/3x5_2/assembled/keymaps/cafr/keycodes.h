@@ -46,11 +46,15 @@ enum custom_keycodes {
 #define LALT_I     LALT_T(KC_I)
 #define LGUI_O     LGUI_T(KC_O)
 
+/* Thumb Mod-Tap */
+#define SFT_TAB MT(MOD_LSFT, KC_TAB)
+
 /* Layer-Tap */
 #define NAV_SPC  LT(LAYER_NAV,  KC_SPC)
 #define FOO_TAB  LT(LAYER_TODO, KC_TAB)
 #define SYM_ENT  LT(LAYER_SYM,  KC_ENT)
 #define NUM_E    LT(LAYER_NUM,  KC_E)
+#define NUM_BSP  LT(LAYER_NUM,   KC_BSPC)
 
 /*One Shot Keys*/
 #define OSL_BAS  OSL(LAYER_BASE)

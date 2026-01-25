@@ -4,9 +4,9 @@ COMB(delete,   KC_DEL,   FR_L,   FR_U, FR_Y)
 COMB(boot,     QK_BOOT,  FR_Q,   FR_W, FR_F, FR_P)
 
 // Accents
-COMB(e_grave,  E_GRV,    LCTL_E, LSFT_N)
-COMB(a_grave,  A_GRV,    LGUI_A, LSFT_N)
-COMB(u_grave,  U_GRV,    FR_U,   LSFT_N)
+COMB(e_grave,  E_GRV,    LCTL_E, LALT_R)
+COMB(a_grave,  A_GRV,    LGUI_A, LALT_R)
+COMB(u_grave,  U_GRV,    FR_U,   LALT_R)
 COMB(e_circ,   E_CIRC,	 LCTL_E, FR_X)
 COMB(a_circ,   A_CIRC,	 LGUI_A, FR_X)
 COMB(i_circ,   I_CIRC,	 LALT_I, FR_X)
