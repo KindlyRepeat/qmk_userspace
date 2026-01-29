@@ -34,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
           FR_Z,    FR_X,    FR_C,    FR_D,    FR_V,       FR_K,    FR_H, FR_COMM,  FR_DOT, FR_EACU,
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
-	                          NAV_SPC, SFT_TAB,    SYM_ENT, NUM_BSP
+	                          NAV_SPC, SFT_TAB,    SYM_ENT, MO(LAYER_NUM)
   //                            ╰──────────────────╯ ╰──────────────────╯
   ),
 
@@ -64,9 +64,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_NUM] = LAYOUT_split_3x5_2(
   // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
-       FR_LBRC,    KC_7,    KC_8,    KC_9, FR_RBRC,      KC_NO, FR_LDAQ, FR_LABK, FR_RABK, FR_RDAQ,
+       FR_LBRC,    KC_7,    KC_8,    KC_9, FR_RBRC,      KC_NO, FR_LDAQ, FR_LABK, KC_BSPC,  KC_DEL,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-       KC_SCLN,    KC_4,    KC_5,    KC_6,  KC_EQL,      KC_NO,   KC_NO, KC_LCTL, KC_LALT, KC_LGUI,
+       KC_SCLN,    KC_4,    KC_5,    KC_6,  KC_EQL,     QK_REP,   OSM(MOD_LSFT), OSM(MOD_LCTL), OSM(MOD_LALT), OSM(MOD_LGUI),
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
        FR_DGRV,    KC_1,    KC_2,    KC_3, FR_BSLS,      KC_NO,   KC_NO,   KC_NO,  FR_DOT, FR_SLSH,
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
