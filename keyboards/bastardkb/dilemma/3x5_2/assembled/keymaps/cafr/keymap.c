@@ -64,11 +64,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_NUM] = LAYOUT_split_3x5_2(
   // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
-       FR_LBRC,    KC_7,    KC_8,    KC_9, FR_RBRC,      KC_NO, FR_LDAQ, FR_LABK, KC_BSPC,  KC_DEL,
+       FR_LBRC,    KC_7,    KC_8,    KC_9, FR_RBRC,      KC_NO, FR_LDAQ, FR_RDAQ, KC_BSPC,  KC_DEL,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-       KC_SCLN,    KC_4,    KC_5,    KC_6,  KC_EQL,     QK_REP,   OSM(MOD_LSFT), OSM(MOD_LCTL), OSM(MOD_LALT), OSM(MOD_LGUI),
+       KC_SCLN,    KC_4,    KC_5,    KC_6,  KC_EQL,     QK_REP, OS_LSFT, OS_LCTL, OS_LALT, OS_LGUI,
   // ├─────────────────────────────────────────────┤ ├─────────────────────────────────────────────┤
-       FR_DGRV,    KC_1,    KC_2,    KC_3, FR_BSLS,      KC_NO,   KC_NO,   KC_NO,  FR_DOT, FR_SLSH,
+       FR_DGRV,    KC_1,    KC_2,    KC_3, FR_BSLS,      KC_NO, FR_LABK, FR_RABK,  FR_DOT, FR_SLSH,
   // ╰─────────────────────────────────────────────┤ ├─────────────────────────────────────────────╯
                                      KC_0, KC_MINS,      KC_NO,   KC_NO
   //                            ╰──────────────────╯ ╰──────────────────╯

@@ -56,10 +56,18 @@ enum custom_keycodes {
 #define NUM_E    LT(LAYER_NUM,  KC_E)
 #define NUM_BSP  LT(LAYER_NUM,   KC_BSPC)
 
-/*One Shot Keys*/
-#define OSL_BAS  OSL(LAYER_BASE)
-#define OSL_SYM  OSL(LAYER_SYM)
-#define OSL_NUM  OSL(LAYER_NUM)
+/* One Shot Keys */
+#define OS_BAS  OSL(LAYER_BASE)
+#define OS_SYM  OSL(LAYER_SYM)
+#define OS_NUM  OSL(LAYER_NUM)
+#define OS_LCTL OSM(MOD_LCTL)
+#define OS_LSFT OSM(MOD_LSFT)
+#define OS_LALT OSM(MOD_LALT)
+#define OS_LGUI OSM(MOD_LGUI)
+#define OS_RCTL OSM(MOD_RCTL)
+#define OS_RSFT OSM(MOD_RSFT)
+#define OS_RALT OSM(MOD_RALT)
+#define OS_RGUI OSM(MOD_RGUI)
 
 /* Toggle layer */
 #define TO_BASE  TO(LAYER_BASE)

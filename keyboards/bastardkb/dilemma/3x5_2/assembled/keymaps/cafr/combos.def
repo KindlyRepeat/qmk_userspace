@@ -17,6 +17,6 @@ COMB(e_trema,  E_DIAE,   FR_E, FR_D)
 COMB(i_trema,  I_DIAE,   FR_I, FR_D)
 
 // Macros
-COMB(parenthesis, M_PAREN, OSL_SYM, LSFT_N,  LCTL_E)
-COMB(bracket, M_BRC,   OSL_SYM, FR_L,    FR_U)
-COMB(curly_bracket, M_CBR,   OSL_SYM, FR_H,    FR_COMM)
+COMB(parenthesis,   M_PAREN, OS_SYM, LSFT_N,  LCTL_E)
+COMB(bracket,       M_BRC,   OS_SYM, FR_L,    FR_U)
+COMB(curly_bracket, M_CBR,   OS_SYM, FR_H,    FR_COMM)
