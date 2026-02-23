@@ -3,6 +3,7 @@
 #include QMK_KEYBOARD_H
 
 #include "quantum/quantum_keycodes.h"
+#include "keymap_canadian_french.h"
 
 enum layers {
     LAYER_BASE = 0,
