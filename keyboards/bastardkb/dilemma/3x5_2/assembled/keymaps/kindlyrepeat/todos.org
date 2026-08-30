@@ -1,5 +1,16 @@
 #+title: TODOS
 
+* Objectives
+
+** The left hand should be sufficient when the other hand is on the mouse.
+Meaning that:
++ All modifiers should be accessible :: control-click, shift-click, C-w (close tab) C-t (new tab) C-tab (tab next), etc.
+      - This imply a way to mirror the right hand on the left to do things like C-y (in Emacs)
++ backspace should be accessible :: Select some text and delete it.
+
+This imply that I should dedicate the inner left thumb key to the layer with one shot homerow mods.
+Could backspace be on the outer left thunb when on that homerow mod layer ?
+
 * TODO Shorterm :
 ** TODO Combo for tab. I'd rather have A+R as TAB but those are currently bound to A_GRV.
 ** TODO Use emacs-next for editorconfig support. Enable it for qmk

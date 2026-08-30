@@ -9,8 +9,8 @@
 #define ______________COLEMAK_MOD_DH_R2____________       FR_M,    FR_N,    FR_E,    FR_I,    FR_O
 #define ______________COLEMAK_MOD_DH_R3____________       FR_K,    FR_H,    FR_COMM, FR_DOT,  FR_EACU
 
-#define __________________NAV_L1___________________       QK_BOOT, _______, _______, _______, _______
-#define __________________NAV_L2___________________       KC_LGUI, KC_LALT, KC_LCTL, KC_BTN1, KC_BTN2
+#define __________________NAV_L1___________________       QK_BOOT, _______, C(S(KC_TAB)), C(KC_TAB), _______
+#define __________________NAV_L2___________________       OS_LGUI, OS_LALT, OS_LCTL, KC_BSPC,  KC_DEL
 #define __________________NAV_L3___________________       _______, KC_RALT, _______, _______, _______
 
 #define __________________NAV_R1___________________       KC_AGIN, KC_UNDO,  KC_CUT, KC_COPY, KC_PSTE

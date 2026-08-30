@@ -2,6 +2,8 @@
 COMB(backsp,   KC_BSPC,  FR_U,   FR_Y)
 COMB(delete,   KC_DEL,   FR_L,   FR_U, FR_Y)
 COMB(boot,     QK_BOOT,  FR_Q,   FR_W, FR_F, FR_P)
+COMB(capslk,   KC_CAPS,  NAV_SPC, FR_A)
+COMB(capswd,   CW_TOGG,  LAY_NUM, FR_O)
 
 // Accents
 COMB(e_grave,  E_GRV,    FR_E, FR_R)

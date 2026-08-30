@@ -47,6 +47,7 @@ enum custom_keycodes {
 #define LALT_I     LALT_T(KC_I)
 #define LGUI_O     LGUI_T(KC_O)
 
+#define LAY_NUM MO(LAYER_NUM)
 /* Thumb Mod-Tap */
 #define SFT_TAB MT(MOD_LSFT, KC_TAB)
 
