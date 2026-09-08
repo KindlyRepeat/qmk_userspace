@@ -1,0 +1,24 @@
+//   Name      Result    Chord keys
+COMB(backsp,   KC_BSPC,  FR_U,   FR_Y)
+COMB(delete,   KC_DEL,   FR_L,   FR_U, FR_Y)
+COMB(boot,     QK_BOOT,  FR_Q,   FR_W, FR_F, FR_P)
+COMB(capswd,   CW_TOGG,  LAY_NUM, FR_O)
+COMB(capslk,   KC_CAPS,  LAY_NUM, FR_I)
+
+// Accents
+COMB(e_grave,  E_GRV,    FR_E, FR_R)
+COMB(a_grave,  A_GRV,    FR_A, FR_R)
+COMB(u_grave,  U_GRV,    FR_U, FR_R)
+COMB(e_circ,   E_CIRC,	 FR_E, FR_X)
+COMB(a_circ,   A_CIRC,	 FR_A, FR_X)
+COMB(i_circ,   I_CIRC,	 FR_I, FR_X)
+COMB(o_circ,   O_CIRC,   FR_O, FR_X)
+COMB(u_circ,   U_CIRC,	 FR_U, FR_X)
+COMB(c_cedil,  C_CEDL,   FR_C, FR_D)
+COMB(e_trema,  E_DIAE,   FR_E, FR_D)
+COMB(i_trema,  I_DIAE,   FR_I, FR_D)
+
+// Macros
+COMB(parenthesis,   M_PAREN, OS_SYM, LSFT_N,  LCTL_E)
+COMB(bracket,       M_BRC,   OS_SYM, FR_L,    FR_U)
+COMB(curly_bracket, M_CBR,   OS_SYM, FR_H,    FR_COMM)

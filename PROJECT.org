@@ -1,0 +1,101 @@
+#+TITLE: QMK Userspace
+#+STARTUP: hidedrawers
+
+* Goal
+:PROPERTIES:
+:SUMMARY:  Stable north star: what this project is and the conditions under which it is considered done. Unlike Status, this rarely changes.
+:END:
+
+* Status
+:PROPERTIES:
+:SUMMARY:  Current project state: what you were working on, what is partially done, and the mental context needed to resume.
+:END:
+
+* Next actions
+:PROPERTIES:
+:SUMMARY:  Concrete executable tasks. These should be specific enough that you can start without rethinking the project.
+:END:
+
+** TODO Outer thumb is more comfortable, move Enter to outer on right hand
+*** TODO On Iris, use other thumb keys so it resembles Dilemma
+
+** TODO Add a timout for CAPS_WORD
+
+** TODO Switch applications easily on windows
++ I'd need a key for alt-tab and alt-shift-tab
++ It would also need to keep Alt pressed down, so the switching menu opens up
++ [[https://getreuer.info/posts/keyboards/cyclotab/][Cyclotab QMK module]] ?
+
+* Open questions
+:PROPERTIES:
+:SUMMARY:  Unresolved uncertainties and things to research. Distinct from Next actions (executable) and Decisions (settled). Promote these to Decisions once resolved.
+:END:
+
+** I need a way to have Ctrl as its own key because of Ctrl-mouse click
+
+** I might want to drop auto shift and use dedicated shift key
+It would need to be on the opposite hand of the space key.
+
+** If Shift and Ctrl get their own thumb key, backspace and delete could maybe be added on the homerow
+Mod+t and Mod+g for example. This way I can access it the same way when using a single hand.
+
+** It might not be necessary to have everything accessible on the left hand.
+Here's the essentials:
++ Ctrl-C
++ Ctrl-V
++ Ctrl-X
++ Ctrl-Z (undo)
++ Ctrl-S (save)
++ Ctrl-A (optional but good to have)
++ Ctrl-W (close tab)
++ Ctrl-Tab (next tab)
++ Ctrl-Shift-Tab (previous tab)
++ Backspace
++ Delete (optional but good to have)
++ Alt-Tab (window switching on Windows)
++ Alt-Shift-Tab (window switching on Windows)
++ Others ?
+
+* Decisions
+:PROPERTIES:
+:SUMMARY:  Choices already made, especially ones you do not want to revisit repeatedly. Example: “Use Org as canonical project state.”
+:END:
+
+** Choice of combo keys
+Keys in a combo should be keys that are not typically typed one after another.
+*** Bad choice of combo:
++ ~Space~ + ~<another key>~
+
+** Combo for CAPS LOCK
++ Space + A is a bad decision. Its too easy to trigger my mistake.
+
+* Log
+:PROPERTIES:
+:SUMMARY:  Chronological record of work sessions, discoveries, blockers, and changes. Useful for reconstructing why the project is where it is.
+:END:
+
+* References
+:PROPERTIES:
+:SUMMARY:  Related files, documentation, external resources, and links needed to work on the project.
+:END:
+
+* Archive
+
+** DONE Is it too slow to activate Caps Word (CW_TOGGLE)
+:PROPERTIES:
+:ARCHIVE_TIME: 2026-08-30 Sun 16:02
+:ARCHIVE_FILE: ~/src/qmk_userspace/PROJECT.org
+:ARCHIVE_OLPATH: Next actions
+:ARCHIVE_CATEGORY: PROJECT
+:ARCHIVE_TODO: TODO
+:END:
+Try it as a combo instead.
+
+** DONE Add Caps Lock as well, close to CW_TOGGLE
+:PROPERTIES:
+:ARCHIVE_TIME: 2026-08-30 Sun 16:02
+:ARCHIVE_FILE: ~/src/qmk_userspace/PROJECT.org
+:ARCHIVE_OLPATH: Next actions
+:ARCHIVE_CATEGORY: PROJECT
+:ARCHIVE_TODO: TODO
+:END:
