@@ -26,6 +26,12 @@
 + It would also need to keep Alt pressed down, so the switching menu opens up
 + [[https://getreuer.info/posts/keyboards/cyclotab/][Cyclotab QMK module]] ?
 
+** TODO Test steno-lite
+Try for "que", "les", "ent" (most common french trigram).
+
+** TODO Autocorrect for abreviations ?
+hbl=habillage, pro-=PRO-, etre=être, etc
+
 * Open questions
 :PROPERTIES:
 :SUMMARY:  Unresolved uncertainties and things to research. Distinct from Next actions (executable) and Decisions (settled). Promote these to Decisions once resolved.
